@@ -1,10 +1,13 @@
 @echo off
-title MultiTool - by Ebola Man
+Avalanche multitool V2 - by Finder,sega,ace
 chcp 65001 >nul
 cd files
 color 5
+start /wait cmd /c "cls & call :banner & goto start" /min
+exit /b
+
 :start
-call :banner
+call :menu
 
 :menu
 for /f %%A in ('"prompt $H &echo on &for %%B in (1) do rem"') do set BS=%%A
